@@ -1,0 +1,164 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+    padding: 20px;
+    align-items: start; 
+    grid-template-areas: 
+    "header"
+    "slogan"
+    "nav"
+
+}
+
+header, footer {
+    grid-area: header;
+    background:#bc8657;
+    color: #ffffff;
+    padding:  0.5rem;
+    font-family: arial;
+    text-align: center;
+    font-size: 12;
+}
+
+h1 {
+    margin: 0;
+}
+.slogan {
+    grid-area: slogan;
+    font-size: 1rem;
+    margin-top: 0;
+    
+}
+
+nav ul {
+    grid-area: nav;
+    list-style: none;
+    font-family: arial;
+    padding: 0;
+    text-align: center;
+    margin-top: 0;
+}
+
+nav ul li {
+    grid-area: nav;
+    padding: 0;
+    display: inline;
+    margin-right: 10px;
+   
+
+}
+
+.secao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "img1 img2 img3"
+    "tosc lima paris";
+    grid-template-rows: auto auto;
+    gap: 10px;
+    padding: 20px;
+    
+}
+
+.img1{
+    grid-area: img1;
+    height: 300px;
+    width: 300px;
+}
+
+.img2{
+    height: 300px;
+    width: 300px;
+    grid-area: img2;
+    
+}
+
+.img3 {
+    height: 300px;
+    width: 300px;
+    grid-area: img3;
+
+}
+.tosc{
+    grid-area: tosc;
+}
+.lima{
+    grid-area: lima;
+}
+.paris{
+    grid-area: paris;
+}
+
+.tabela1 table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: #f2e4d3; 
+    color: #4b3b2e; 
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border: 2px solid black;
+   
+    
+    
+}
+
+.tabela1 th {
+    background-color: #d1b29b; 
+    color: #ffffff;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #8c6a52;
+    border: 2px solid black; 
+}
+
+.tabela1 td {
+    padding: 10px;
+    border-bottom: 1px solid #d1b29b;
+    border: 2px solid black; 
+}
+
+.tabela1 tr:nth-child(even) {
+    background-color: #f7efe9; 
+}
+
+.tabela1 tr:hover {
+    background-color: #e3d4c5;
+    transition: background-color 0.3s;
+}
+
+@media(max-width:1024px){
+    .secao {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "img1 img2" 
+        "tosc lima"
+        "img3 img3"
+        "paris paris";
+        grid-template-rows: auto auto auto auto;      
+    }
+    }
+
+    @media(max-width:600px){
+        .secao {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: "img1" 
+            "tosc" 
+            "img2" 
+            "lima"
+            "img3"
+            "paris";
+            grid-template-rows: auto auto auto auto;      
+        }
+        }
+    
+
+
+ 
+
+
+
